@@ -1,4 +1,4 @@
-let form = document.getElementById("form-user");
+let form = document.querySelector("#user-data");
 
 // localStorage.clear();
 // let Entries = [];
@@ -47,7 +47,7 @@ const displayEntries = () => {
   </table>`;
 };
 
-// const saveUserFrom = () => {
+
 const saveUserFrom = (event) => {
   event.preventDefault();
 
@@ -72,7 +72,7 @@ const saveUserFrom = (event) => {
   displayEntries();
 };
 
-form.addEventListener("submit", saveUserFrom);
+form.addEventListener("submit", (e)=>saveUserFrom(e));
 
 displayEntries();
 
@@ -112,7 +112,7 @@ dateELE.addEventListener("change", () => {
 
 const email = document.getElementById("email");
 
-email.addEventListener("input", () => validate(email));
+email.addEventListener("keyup", () => validate(email));
 
 function validate(e) {
   if (e.validity.typeMismatch) {
