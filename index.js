@@ -45,6 +45,7 @@ const displayEntries = () => {
   </tr>
     ${rows}
   </table>`;
+  window.scrollTo(0,500);
 };
 
 
